@@ -32,8 +32,8 @@ while run_flag:
     print(f"{first_number} {opeation} {next_number} = {result}")
 
     cont_or_exit = input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ")
-    if cont_or_exit == "n":
-        run_flag = False
-        print("Bye Bye")
+    # if cont_or_exit == "n":
+    #     run_flag = False
+    #     print("Bye Bye")
         
 
