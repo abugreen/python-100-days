@@ -1,5 +1,4 @@
-import random
+import sys
+from PyQt5.QtWidgets import QApplication , QWidget
 
-your_card = []
- = random.randint(1,13)
-print(your_card)
+
