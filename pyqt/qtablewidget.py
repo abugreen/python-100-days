@@ -13,17 +13,37 @@ class MyWindow(QWidget):
         self.initUI()
 
     def initUI(self):
-        self.setWindowTitle("qcombobox")
-        layout = QFormLayout(self)
+        self.setWindowTitle("qtablewidget")
+        self.resize(800,600)
+       
+        layout = QVBoxLayout(self)
+        table = QTableWidget()
+        layout.addWidget(table)
+        table.setRowCount(len(data))
+        table.setColumnCount(len(column_names))
+        table.setHorizontalHeaderLabels(column_names)
+        horizontalHeader = table.horizontalHeader()
+        # horizontalHeader.setSectionResizeMode(QHeaderView.ResizeToContents)
 
-        box = QComboBox()
-        box.addItem("c++")
-        box.addItem("c")
-        box.addItems(["java", "python"])
-        box.currentIndexChanged.connect(self.selectionchange)
+        for row in range(len(data)):
+            for col in range(len(column_names)):
+                table.setItem(row, col, QTableWidgetItem(data[row][col]))
 
-        layout.addRow(QLabel("choice your language"),box)
+        table.itemSelectionChanged.connect(self.click_success)
 
-  
-    def selectionchange(self, item):
-        print(item.text())
+    def click_success(self):
+        table = self.sender()
+        row = table.currentRow()
+        col = table.currentColumn()
+        print(data[row][col])
+
+
+
+def main():
+    app = QApplication(sys.argv)
+    window = MyWindow()
+    window.show()
+    app.exec_()
+
+if __name__ == "__main__":
+    main()
