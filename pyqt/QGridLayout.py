@@ -19,10 +19,11 @@ class MyWindow(QWidget):
         buttonGreen = QPushButton("Green", self)
         buttonGreen.clicked.connect(self.on_click)
         
-        hboxlayout = QHBoxLayout(self)
-        hboxlayout.addWidget(buttonBlue)
-        hboxlayout.addWidget(buttonRed)
-        hboxlayout.addWidget(buttonGreen)
+        gridlayout = QGridLayout(self)
+        gridlayout.addWidget(buttonBlue,1,1)
+        gridlayout.addWidget(buttonRed,1,2)
+        gridlayout.addWidget(buttonGreen,2,1)
+     
 
     def on_click(self): 
         sender = self.sender()
