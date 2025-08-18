@@ -9,8 +9,5 @@ if __name__ == "__main__":
     form = login.Ui_Form()
     form.setupUi(window)
     
-    
-    
-    
     window.show()
     app.exec_() 

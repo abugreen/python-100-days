@@ -31,6 +31,7 @@ class Ui_Form(object):
         self.label_2.setObjectName("label_2")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_2)
         self.password = QtWidgets.QLineEdit(self.widget)
+        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.password.setObjectName("password")
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.password)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
