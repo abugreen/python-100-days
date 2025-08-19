@@ -1,7 +1,7 @@
 #coding = utf-8
 
 import pymysql
-from db_config import *
+from dao.db_config import *
 
 class BaseDao(object):
     def __init__(self):
