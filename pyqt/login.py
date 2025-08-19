@@ -53,3 +53,13 @@ class Ui_Form(object):
         self.label_2.setText(_translate("Form", "密碼 :"))
         self.btn_ok.setText(_translate("Form", "登陸"))
         self.btn_cancel.setText(_translate("Form", "取消"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Form = QtWidgets.QWidget()
+    ui = Ui_Form()
+    ui.setupUi(Form)
+    Form.show()
+    sys.exit(app.exec_())
