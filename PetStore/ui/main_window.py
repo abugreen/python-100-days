@@ -35,12 +35,11 @@ class MyWindow(QWidget):
         top_layout.addWidget(self.combo_box)
         top_layout.addWidget(rest_btn)
         top_layout.addWidget(go_btn)
-        
+        main_layout.addLayout(top_layout)
         # go_btn.clicked.connect(self.go_btnclick)
         # rest_btn.clicked.connect(self.rest_btnclick)
         self.table = self.create_table()
-        main_layout.addLayout(top_layout)
-        
+       
         # 创建分割窗口
         splitter = QSplitter()
         splitter.setSizes([900, 300])
