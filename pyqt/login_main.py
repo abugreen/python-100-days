@@ -1,13 +1,18 @@
 import sys
-from PyQt5.QtWidgets import *
+from PyQt6.QtWidgets import *
 
-import login
+from login_6 import Ui_Form
+
+
+class MyWidget(Ui_Form , QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.show()
+           
+    
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = QWidget()
-    form = login.Ui_Form()
-    form.setupUi(window)
-    
-    window.show()
-    app.exec_() 
+    mywindow = MyWidget()
+    app.exec() 
